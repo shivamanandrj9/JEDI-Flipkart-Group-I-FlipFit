@@ -2,7 +2,7 @@ package com.flipkart.business;
 
 import com.flipkart.dao.GymDao;
 
-public class ListingAndUnlistingService {
+public class ListingAndUnlistingService implements ListingAndUnlistingServiceInterface {
 
     public static GymDao gymDao = new GymDao();
 

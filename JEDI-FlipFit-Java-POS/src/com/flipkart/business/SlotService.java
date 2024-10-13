@@ -10,7 +10,7 @@ import com.flipkart.utils.DbUtils;
 
 import java.util.List;
 
-public class SlotService {
+public class SlotService implements SlotServiceInterface {
 
     private static SlotDao slotDao=new SlotDao();
     public static DbUtils dbutils=new DbUtils();
