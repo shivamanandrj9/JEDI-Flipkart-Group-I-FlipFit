@@ -8,6 +8,11 @@ import com.flipkart.utils.DbUtils;
 
 import java.util.*;
 
+/**
+ * Represents the slot activity menu in the FlipFit system.
+ * This class provides functionalities for managing gym slots,
+ * including adding, booking, and canceling slots.
+ */
 public class SlotActivityMenu {
 
     public static GymDao gymDao = new GymDao();
@@ -17,9 +22,15 @@ public class SlotActivityMenu {
 
     private SlotService slotService = new SlotService();
 
-    public void addSlot(Scanner scanner,String gymOwnerId){
+    /**
+     * Adds a new slot to a selected gym.
+     *
+     * @param scanner    Scanner instance for user input
+     * @param gymOwnerId The ID of the gym owner adding the slot
+     */
+    public void addSlot(Scanner scanner, String gymOwnerId) {
 
-        List<Gym> gymList=gymDao.getGymCenters(gymOwnerId);
+        List<Gym> gymList = gymDao.getGymCenters(gymOwnerId);
 
 
         System.out.println();
@@ -36,17 +47,17 @@ public class SlotActivityMenu {
         System.out.print("Select the Gym ID to add slots: ");
 
 
-        boolean isValidSelection=false;
+        boolean isValidSelection = false;
         String selectedId = "";
-        while (isValidSelection==false){
-            selectedId=scanner.nextLine();
-            for(Gym gym:gymList){
-                if(gym.getGymId().equals(selectedId)){
-                    isValidSelection=true;
+        while (isValidSelection == false) {
+            selectedId = scanner.nextLine();
+            for (Gym gym : gymList) {
+                if (gym.getGymId().equals(selectedId)) {
+                    isValidSelection = true;
                 }
             }
 
-            if(!isValidSelection) {
+            if (!isValidSelection) {
                 System.out.println("Invalid selection, please try again");
                 addSlot(scanner, gymOwnerId);
             }
@@ -57,7 +68,7 @@ public class SlotActivityMenu {
         System.out.println("Please enter the below details");
         System.out.println();
 
-        String id = Integer.toString(1+dbUtils.getTableCnt("Slot"));
+        String id = Integer.toString(1 + dbUtils.getTableCnt("Slot"));
         System.out.print("Enter year(yyyy): ");
         String year = scanner.nextLine();
         System.out.print("Enter month(mm): ");
@@ -71,9 +82,9 @@ public class SlotActivityMenu {
         String endTime = scanner.nextLine();
         System.out.print("Enter capacity of slot(Number of vacancies): ");
 
-        String st = date+"/"+month+"/"+year;
+        String st = date + "/" + month + "/" + year;
         int cp = scanner.nextInt();
-        Slot slt = new Slot(selectedId,  id, st, startTime,endTime,cp);
+        Slot slt = new Slot(selectedId, id, st, startTime, endTime, cp);
         slotService.addSlot(slt);
 
         System.out.println();
@@ -83,15 +94,21 @@ public class SlotActivityMenu {
     }
 
 
-    public void bookSlot(Scanner scanner, User user){
+    /**
+     * Books a slot for a user.
+     *
+     * @param scanner Scanner instance for user input
+     * @param user    User attempting to book a slot
+     */
+    public void bookSlot(Scanner scanner, User user) {
 
-        List<Gym> gymList=gymDao.getAllGymCenters();
+        List<Gym> gymList = gymDao.getAllGymCenters();
 
         System.out.println();
         System.out.print("Enter city: ");
         String city = scanner.nextLine();
         System.out.println();
-        System.out.println("-----Gyms that are available in " + city +"-----");
+        System.out.println("-----Gyms that are available in " + city + "-----");
 
         System.out.println();
         System.out.println("---------------------------------------------------------------");
@@ -111,26 +128,22 @@ public class SlotActivityMenu {
         System.out.print("Enter the selected gym's ID: ");
         String gymId = scanner.nextLine();
 
-        Gym selectedGym=getGymFromId(gymList, gymId, city);
+        Gym selectedGym = getGymFromId(gymList, gymId, city);
 
-        while(selectedGym==null){
+        while (selectedGym == null) {
             System.out.println("Invalid selection, please try again");
             System.out.println("Enter the selected gym's ID: ");
             gymId = scanner.nextLine();
-            selectedGym=getGymFromId(gymList,gymId,city);
+            selectedGym = getGymFromId(gymList, gymId, city);
         }
 
 
-
         System.out.print("Enter the date of booking (DD/MM/YYYY): ");
-        String date=scanner.nextLine();
+        String date = scanner.nextLine();
 
 
-
-
-
-        List<Slot> slotList= slotDao.getSlots(gymId,date);
-        List<String> availableSlotIds=new LinkedList<>();
+        List<Slot> slotList = slotDao.getSlots(gymId, date);
+        List<String> availableSlotIds = new LinkedList<>();
 
         System.out.println();
         System.out.println("=== Available Slots ===");
@@ -157,12 +170,12 @@ public class SlotActivityMenu {
 
         String selectedSlotId = scanner.nextLine();
 
-        while(!isValidSlotId(availableSlotIds,selectedSlotId)){
+        while (!isValidSlotId(availableSlotIds, selectedSlotId)) {
             System.out.println("Invalid selection, please try again");
-            selectedSlotId=scanner.nextLine();
+            selectedSlotId = scanner.nextLine();
         }
 
-        slotService.bookSlot(user.getUserId(),selectedSlotId);
+        slotService.bookSlot(user.getUserId(), selectedSlotId);
         System.out.println("------SLOT BOOKED------");
         System.out.println();
 
@@ -170,46 +183,61 @@ public class SlotActivityMenu {
     }
 
 
-    public Gym getGymFromId(List<Gym> gymList, String gymId, String selectedCity){
-        for(Gym gym:gymList){
-            if(gym.getGymId().equals(gymId) && gym.getCity().equals(selectedCity))
-            {
+    /**
+     * Retrieves a gym object based on gym ID and city.
+     *
+     * @param gymList      List of gyms
+     * @param gymId        ID of the gym to find
+     * @param selectedCity City of the gym
+     * @return Gym object if found, otherwise null
+     */
+    public Gym getGymFromId(List<Gym> gymList, String gymId, String selectedCity) {
+        for (Gym gym : gymList) {
+            if (gym.getGymId().equals(gymId) && gym.getCity().equals(selectedCity)) {
                 return gym;
             }
         }
         return null;
     }
 
-    public boolean isValidSlotId(List<String> slotIds, String selectedSlotId){
-        for(String slotId:slotIds){
-            if(slotId.equals(selectedSlotId))
-            {
+    /**
+     * Validates if the selected slot ID is valid.
+     *
+     * @param slotIds        List of valid slot IDs
+     * @param selectedSlotId ID of the selected slot
+     * @return True if valid, otherwise false
+     */
+    public boolean isValidSlotId(List<String> slotIds, String selectedSlotId) {
+        for (String slotId : slotIds) {
+            if (slotId.equals(selectedSlotId)) {
                 return true;
             }
         }
         return false;
     }
 
-    public void cancelSlot(Scanner scanner, User user){
+    /**
+     * Cancels a previously booked slot.
+     *
+     * @param scanner Scanner instance for user input
+     * @param user    User attempting to cancel a booking
+     */
+    public void cancelSlot(Scanner scanner, User user) {
 
 
-        BookingService bookingService=new BookingService();
+        BookingService bookingService = new BookingService();
 
 
         bookingService.viewAllBookings(user.getUserId());
 
         System.out.print("Select ID of the booking for cancelling: ");
-        String selectedSlotId=scanner.nextLine();
+        String selectedSlotId = scanner.nextLine();
 
         bookingDao.deleteSlot(selectedSlotId);
 
         System.out.println("------Slot Cancelled Successfully------");
         System.out.println();
     }
-
-
-
-
 
 
 }
