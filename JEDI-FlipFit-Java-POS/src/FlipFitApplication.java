@@ -31,8 +31,8 @@ public class FlipFitApplication
             System.out.println("----------------------------------------------------------------");
             displayCurrentDateTime(); // Display current date and time
             System.out.println("1. Login");
-            System.out.println("2. Registration of the Gym Customer");
-            System.out.println("3. Registration of the Gym Owner");
+            System.out.println("2. Gym Customer Sign Up");
+            System.out.println("3. Gym Owner Sign Up");
             System.out.println("4. Exit");
             System.out.println();
             System.out.print("Enter your choice: ");
