@@ -2,6 +2,7 @@ package com.flipkart.dao;
 
 import com.flipkart.bean.User;
 import com.flipkart.utils.DbUtils;
+import com.flipkart.utils.SQLConstants;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,9 +14,10 @@ public class UserDao implements UserDaoInterface {
 
     @Override
     public void addUser(User user) {
-        String sql = "INSERT INTO User (userId, username, password, name, email, phone, age, roleId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
+//        String sql = "INSERT INTO User (userId, username, password, name, email, phone, age, roleId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.INSERT_USER)) {
             pstmt.setString(1, user.getUserId());
             pstmt.setString(2, user.getUsername());
             pstmt.setString(3, user.getPassword());
@@ -32,8 +34,8 @@ public class UserDao implements UserDaoInterface {
 
     @Override
     public User validateUser(String username, String password) {
-        String sql = "SELECT * FROM User WHERE username = ? AND password = ?";
-        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
+//        String sql = "SELECT * FROM User WHERE username = ? AND password = ?";
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(SQLConstants.GET_USER)) {
             statement.setString(1, username);
             statement.setString(2, password);
             ResultSet rs = statement.executeQuery();
@@ -55,19 +57,5 @@ public class UserDao implements UserDaoInterface {
         return null;
     }
 
-//
-//    @Override
-//    public boolean updateUser(User user) {
-//        String sql = "UPDATE user SET username = ?, password = ? WHERE userid = ?";
-//        try (Connection conn = dbutils.getConnection();
-//             PreparedStatement ps = conn.prepareStatement(sql)) {
-//            ps.setString(1, user.getUsername());
-//            ps.setString(2, user.getPassword());
-//            ps.setString(3, user.getUserid());
-//            return ps.executeUpdate() > 0;
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return false;
-//    }
+
 }

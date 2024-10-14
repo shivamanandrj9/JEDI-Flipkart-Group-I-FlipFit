@@ -4,7 +4,7 @@ import com.flipkart.bean.Gym;
 import com.flipkart.bean.Slot;
 import com.flipkart.helper.StringTriplet;
 import com.flipkart.utils.DbUtils;
-
+import com.flipkart.utils.SQLConstants;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,9 +17,11 @@ public class SlotDao implements SlotDaoInterface {
 
     @Override
     public void addSlot(Slot slot) {
-        String sql = "INSERT INTO Slot (slotID, gymId, date, starttime, endtime, capacity) VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
+//        String sql = "INSERT INTO Slot (slotID, gymId,date, starttime, endtime, capacity) VALUES (?, ?,?, ?, ?, ?)";
+
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.INSERT_SLOT)) {
+
             pstmt.setString(1, slot.getSlotID());
             pstmt.setString(2, slot.getGymId());
             pstmt.setString(3, slot.getDate());
@@ -35,10 +37,12 @@ public class SlotDao implements SlotDaoInterface {
     @Override
     public List<Slot> getSlots(String gymId, String date) {
         List<Slot> slots = new ArrayList<>();
-        String sql = "SELECT * FROM Slot WHERE gymId = ? AND date = ?";
 
-        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
-            statement.setString(1, gymId);
+//        String sql = "SELECT * FROM Slot WHERE gymId = ? AND date=?";
+
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(SQLConstants.GET_DATE_SLOTS)) {
+
+            statement.setString(1, gymId); // Assuming user.getId() gives the gymOwnerID
             statement.setString(2, date);
             ResultSet resultSet = statement.executeQuery();
 
@@ -58,11 +62,13 @@ public class SlotDao implements SlotDaoInterface {
     }
 
     @Override
-    public StringTriplet getSlotTiming(String slotId) {
-        String sql = "SELECT * FROM Slot WHERE slotID = ?";
+    public StringTriplet getSlotTiming(String slotId)
+    {
+//        String sql = "SELECT * FROM Slot WHERE slotID = ?";
 
-        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
-            statement.setString(1, slotId);
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(SQLConstants.GET_SLOT_TIMINGS)) {
+
+            statement.setString(1, slotId); // Assuming user.getId() gives the gymOwnerID
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
