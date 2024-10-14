@@ -2,7 +2,6 @@ package com.flipkart.dao;
 
 import com.flipkart.bean.Booking;
 import com.flipkart.utils.DbUtils;
-import com.flipkart.utils.SQLConstants;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,11 +15,9 @@ public class BookingDao implements BookingDaoInterface {
 
     @Override
     public void bookSlot(Booking booking) {
+        String sql = "INSERT INTO Booking (bookingID, userID, slotID) VALUES (?, ?, ?)";
 
-//        String sql = "INSERT INTO Booking (bookingID, userID, slotID) VALUES (?, ?, ?)";
-
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.INSERT_BOOKING_SLOT)) {
-
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
             pstmt.setString(1, booking.getBookingID());
             pstmt.setString(2, booking.getUserID());
             pstmt.setString(3, booking.getSlotID());
@@ -32,9 +29,9 @@ public class BookingDao implements BookingDaoInterface {
 
     @Override
     public int bookedSlotCount(String slotId) {
-//        String sql = "SELECT COUNT(*) AS countSlots FROM Booking WHERE slotID=?";
+        String sql = "SELECT COUNT(*) AS countSlots FROM Booking WHERE slotID=?";
 
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.GET_BOOKING_SLOT_COUNT)) {
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
             pstmt.setString(1, slotId);
             ResultSet resultSet = pstmt.executeQuery();
 
@@ -50,11 +47,10 @@ public class BookingDao implements BookingDaoInterface {
     @Override
     public List<Booking> getUserBookings(String userId) {
         List<Booking> bookings = new ArrayList<>();
-//        String sql = "SELECT * FROM Booking WHERE userID=?";
+        String sql = "SELECT * FROM Booking WHERE userID=?";
 
-        try (PreparedStatement statement = dbUtils.connection.prepareStatement(SQLConstants.GET_USER_BOOKINGS)) {
-
-            statement.setString(1, userId); // Assuming user.getId() gives the gymOwnerID
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
+            statement.setString(1, userId);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -74,11 +70,9 @@ public class BookingDao implements BookingDaoInterface {
 
     @Override
     public void deleteSlot(String bookingId) {
+        String sql = "DELETE FROM Booking WHERE bookingID=?";
 
-//        String sql = "DELETE FROM Booking WHERE bookingID=?";
-
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.DELETE_USER_BOOKING)) {
-
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
             pstmt.setString(1, bookingId);
             pstmt.executeUpdate();
         } catch (SQLException e) {
