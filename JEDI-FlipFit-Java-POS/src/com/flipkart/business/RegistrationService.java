@@ -11,6 +11,7 @@ public class RegistrationService implements RegistrationServiceInterface {
 
     public static DbUtils dbutils=new DbUtils();
 
+    @Override
     public void createUser(String username,String password,String name, String phone,String email, int age, String roleId)
     {
         String id = "0" + Integer.toString(1+dbutils.getTableCnt("User"));
@@ -21,6 +22,7 @@ public class RegistrationService implements RegistrationServiceInterface {
 
     }
 
+    @Override
     public void createGym(String name, String address, String city, String gymOwnerId)
     {
         String id = "0" + Integer.toString(1+dbutils.getTableCnt("Gym"));

@@ -6,10 +6,12 @@ public class ListingAndUnlistingService implements ListingAndUnlistingServiceInt
 
     public static GymDao gymDao = new GymDao();
 
+    @Override
     public void listThisGym(String gymId){
         gymDao.listGym(gymId);
     }
 
+    @Override
     public void unlistThisGym(String gymId){
         gymDao.unlistGym(gymId);
     }
