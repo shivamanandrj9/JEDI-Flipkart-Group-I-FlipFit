@@ -9,39 +9,39 @@ public class RegistrationMenu {
     private RegistrationService registrationService=new RegistrationService();
 
     public void registerCustomer(Scanner scanner) {
-        System.out.println("Enter your Username");
+        System.out.print("Enter your Username: ");
         String username = scanner.nextLine();
-        System.out.println("Enter your Password");
+        System.out.print("Enter your Password: ");
         String password = scanner.nextLine();
-        System.out.println("Enter your Name");
+        System.out.print("Enter your Name: ");
         String name = scanner.nextLine();
-        System.out.println("Enter your Phone");
+        System.out.print("Enter your Phone: ");
         String phone = scanner.nextLine();
-        System.out.println("Enter your Email");
+        System.out.print("Enter your Email: ");
         String email = scanner.nextLine();
-        System.out.println("Enter your Age");
+        System.out.print("Enter your Age: ");
         int age = Integer.parseInt(scanner.nextLine());
         String roleId="1";
         registrationService.createUser(username,password, name, phone,email, age, roleId);
-        System.out.println("Customer registered successfully!");
+        System.out.println("---- Signed In successfully!----");
     }
 
     public void registerGymOwner(Scanner scanner) {
         System.out.print("Enter your Username: ");
         String username = scanner.nextLine();
-        System.out.println("Enter your Password");
+        System.out.print("Enter your Password: ");
         String password = scanner.nextLine();
-        System.out.println("Enter your Name");
+        System.out.print("Enter your Name: ");
         String name = scanner.nextLine();
-        System.out.println("Enter your Phone");
+        System.out.print("Enter your Phone: ");
         String phone = scanner.nextLine();
-        System.out.println("Enter your Email");
+        System.out.print("Enter your Email: ");
         String email = scanner.nextLine();
-        System.out.println("Enter your Age");
+        System.out.print("Enter your Age: ");
         int age = Integer.parseInt(scanner.nextLine());
         String roleId="3";
         registrationService.createUser(username,password, name, phone,email, age, roleId);
-        System.out.println("Gym Owner registered successfully!");
+        System.out.println("-----Gym Owner registered successfully!-----");
     }
 
     public void registerGym(Scanner scanner, String gymOwnerId) {
