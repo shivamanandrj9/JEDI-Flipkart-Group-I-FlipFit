@@ -87,36 +87,42 @@ public class SlotActivityMenu {
 
         List<Gym> gymList=gymDao.getAllGymCenters();
 
-        System.out.println("Enter city:");
+        System.out.println();
+        System.out.print("Enter city: ");
         String city = scanner.nextLine();
+        System.out.println();
+        System.out.println("-----Gyms that are available in " + city +"-----");
 
-        System.out.println("Here are gyms in the city " + city);
+        System.out.println();
+        System.out.println("---------------------------------------------------------------");
+        System.out.printf("%-15s %-25s %-30s%n", "Gym ID", "Gym Name", "Address");
+        System.out.println("---------------------------------------------------------------");
 
-        for(Gym gym:gymList){
-            if(gym.getIsListed() && gym.getCity().equals(city))
-            {
-                System.out.print(gym.getGymId()+" ");
-                System.out.print(gym.getGymName()+" ");
-                System.out.println(gym.getAddress());
+        for (Gym gym : gymList) {
+            if (gym.getIsListed() && gym.getCity().equals(city)) {
+                System.out.printf("%-15s %-25s %-30s%n",
+                        gym.getGymId(),
+                        gym.getGymName(),
+                        gym.getAddress());
             }
-
         }
 
-        System.out.println("Enter the selected gym's id: ");
+        System.out.println();
+        System.out.print("Enter the selected gym's ID: ");
         String gymId = scanner.nextLine();
 
         Gym selectedGym=getGymFromId(gymList, gymId, city);
 
         while(selectedGym==null){
             System.out.println("Invalid selection, please try again");
-            System.out.println("Enter the selected gym's id: ");
+            System.out.println("Enter the selected gym's ID: ");
             gymId = scanner.nextLine();
             selectedGym=getGymFromId(gymList,gymId,city);
         }
 
 
 
-        System.out.println("Enter the date of booking (DD/MM/YYYY): ");
+        System.out.print("Enter the date of booking (DD/MM/YYYY): ");
         String date=scanner.nextLine();
 
 
@@ -126,24 +132,28 @@ public class SlotActivityMenu {
         List<Slot> slotList= slotDao.getSlots(gymId,date);
         List<String> availableSlotIds=new LinkedList<>();
 
-        System.out.println("Here are the available slots: ");
-        for(Slot slot:slotList){
+        System.out.println();
+        System.out.println("=== Available Slots ===");
+        System.out.printf("%-15s %-20s %-20s %-15s %-10s%n", "Slot ID", "Start Time", "End Time", "Capacity", "Date");
+        System.out.println("--------------------------------------------------------------------------------");
 
-            System.out.println(slot.getSlotID()+"->"+ bookingDao.bookedSlotCount(slot.getSlotID()));
-            int current_capacity=slot.getCapacity()- bookingDao.bookedSlotCount(slot.getSlotID());
-            if(current_capacity!=0)
-            {
+        for (Slot slot : slotList) {
+            int bookedCount = bookingDao.bookedSlotCount(slot.getSlotID());
+            int currentCapacity = slot.getCapacity() - bookedCount;
+
+            if (currentCapacity != 0) {
                 availableSlotIds.add(slot.getSlotID());
-                System.out.print(slot.getSlotID()+" ");
-                System.out.print(slot.getStarttime()+" ");
-                System.out.print(slot.getEndtime()+" ");
-                System.out.print(current_capacity+" ");
-                System.out.println(slot.getDate());
+                System.out.printf("%-15s %-20s %-20s %-15d %-10s%n",
+                        slot.getSlotID(),
+                        slot.getStarttime(),
+                        slot.getEndtime(),
+                        currentCapacity,
+                        slot.getDate());
             }
-
         }
 
-        System.out.println("Select the slot id to book the slot: ");
+        System.out.println();
+        System.out.print("Select the slot ID to book the slot: ");
 
         String selectedSlotId = scanner.nextLine();
 
@@ -153,7 +163,8 @@ public class SlotActivityMenu {
         }
 
         slotService.bookSlot(user.getUserId(),selectedSlotId);
-
+        System.out.println("------SLOT BOOKED------");
+        System.out.println();
 
 
     }
@@ -184,14 +195,16 @@ public class SlotActivityMenu {
 
         BookingService bookingService=new BookingService();
 
-        System.out.println("Select ID of the booking for cancelling ");
+
         bookingService.viewAllBookings(user.getUserId());
+
+        System.out.print("Select ID of the booking for cancelling: ");
         String selectedSlotId=scanner.nextLine();
 
         bookingDao.deleteSlot(selectedSlotId);
 
-        System.out.println("Slot Deleted Successfully");
-
+        System.out.println("------Slot Cancelled Successfully------");
+        System.out.println();
     }
 
 
