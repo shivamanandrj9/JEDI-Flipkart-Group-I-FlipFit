@@ -2,9 +2,10 @@ package com.flipkart.business;
 
 import com.flipkart.bean.*;
 import com.flipkart.dao.*;
-import com.flipkart.exception.UserNoBookingException;
 import com.flipkart.helper.StringTriplet;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class BookingService implements BookingServiceInterface {
@@ -25,12 +26,9 @@ public class BookingService implements BookingServiceInterface {
 
         List<Booking> bookingsUser;
 
-        try {
+
              bookingsUser = bookingDao.getUserBookings(userId);
-        } catch (UserNoBookingException e) {
-            System.out.println(e.toString());
-            return;
-        }
+
 
 
         for (Booking booking : bookingsUser) {
@@ -45,8 +43,8 @@ public class BookingService implements BookingServiceInterface {
                     curr_gym.getCity(),
                     curr_gym.getAddress(),
                     datetime.getDate(),
-                    datetime.getStarttime(),
-                    datetime.getEndtime());
+                    convertTo12HourFormat(datetime.getStarttime()),
+                    convertTo12HourFormat(datetime.getEndtime()));
         }
         System.out.println();
 
@@ -57,4 +55,23 @@ public class BookingService implements BookingServiceInterface {
 
     }
 
+    public static String convertTo12HourFormat(String time24) {
+        // Ensure the input is in the correct format
+        if (time24.length() != 4) {
+            throw new IllegalArgumentException("Time must be in the format HHMM (e.g., 1430).");
+        }
+
+        // Parse the hours and minutes
+        int hour = Integer.parseInt(time24.substring(0, 2));
+        int minute = Integer.parseInt(time24.substring(2, 4));
+
+        // Create a LocalTime object
+        LocalTime time = LocalTime.of(hour, minute);
+
+        // Define a formatter for 12-hour format
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("h:mm a");
+
+        // Format the LocalTime to the desired 12-hour format string
+        return time.format(formatter);
+    }
 }

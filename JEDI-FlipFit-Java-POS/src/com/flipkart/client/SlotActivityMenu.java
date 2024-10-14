@@ -19,6 +19,7 @@ public class SlotActivityMenu {
     public static DbUtils dbUtils = new DbUtils();
     public static SlotDao slotDao = new SlotDao();
     public static BookingDao bookingDao = new BookingDao();
+    public static PaymentDao paymentDao = new PaymentDao();
 
     private SlotService slotService = new SlotService();
 
@@ -175,7 +176,37 @@ public class SlotActivityMenu {
             selectedSlotId = scanner.nextLine();
         }
 
+
+
+        Payment payment = new Payment();
+
+        System.out.println("------Provide details for payment------");
+        System.out.println();
+
+        // Prompt user for details
+
+        int paymentid =1+dbUtils.getTableCnt("payment");
+        payment.setPaymentsId(paymentid);
+
+        System.out.print("Enter Card Number: ");
+        payment.setCardNumber(scanner.nextLine());
+
+        System.out.print("Enter Expiry Date (MM/YYYY): ");
+        payment.setExpiryDate(scanner.nextLine());
+
+        System.out.print("Enter Name on Card: ");
+        payment.setName(scanner.nextLine());
+
+        System.out.print("Enter CVV: ");
+        payment.setCvv(scanner.nextLine());
+
+
+
+        System.out.println("------Payment Successfull-----");
+
+        paymentDao.addPayment(payment);
         slotService.bookSlot(user.getUserId(), selectedSlotId);
+
         System.out.println("------SLOT BOOKED------");
         System.out.println();
 

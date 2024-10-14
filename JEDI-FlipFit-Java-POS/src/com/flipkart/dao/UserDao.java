@@ -16,7 +16,7 @@ public class UserDao implements UserDaoInterface {
     @Override
     public void addUser(User user) throws UserAlreadyExistsException {
 
-//        String sql = "INSERT INTO User (userId, username, password, name, email, phone, age, roleId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO User (userId, username, password, name, email, phone, age, roleId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.GET_USER)){
             pstmt.setString(1, user.getUsername());
             pstmt.setString(2, user.getPassword());
