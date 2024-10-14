@@ -18,10 +18,11 @@ public class SlotService implements SlotServiceInterface {
     public static BookingDao bookingDao=new BookingDao();
     public static Config cfg=new Config();
 
+    @Override
     public void addSlot(Slot slot) {
         slotDao.addSlot(slot);
     }
-
+    @Override
     public void bookSlot(String userId,String slotId)
     {
 
