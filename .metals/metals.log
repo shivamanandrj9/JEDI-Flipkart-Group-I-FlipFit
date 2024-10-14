@@ -1,0 +1,20 @@
+2024.10.14 08:59:32 INFO  Started: Metals version 1.3.5 in folders '/Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit' for client Neovim 0.11.0-dev+g64847fbdc.[0m
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@174a3b8d]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@410609e7]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@174a3b8d]
+2024.10.14 08:59:32 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.[0m
+2024.10.14 08:59:33 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.14 08:59:33 WARN  no build tool detected in workspace '/Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2024.10.14 08:59:33 WARN  Build server is not auto-connectable.[0m
+Oct 14, 2024 8:59:34 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-14/r_compiler-error_08-59-34-864.md
+2024.10.14 08:59:44 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 14, 2024 8:59:44 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-14/r_compiler-error_08-59-44-407.md
+2024.10.14 09:00:17 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/dao/GymDao.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 14, 2024 9:00:17 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-14/r_compiler-error_09-00-17-761.md
+2024.10.14 09:01:05 INFO  Shutting down server[0m
+2024.10.14 09:01:05 INFO  shutting down Metals[0m
