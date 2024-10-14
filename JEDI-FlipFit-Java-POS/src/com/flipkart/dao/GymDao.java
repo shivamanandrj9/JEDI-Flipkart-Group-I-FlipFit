@@ -1,6 +1,6 @@
 package com.flipkart.dao;
 
-import com.flipkart.bean.*;
+import com.flipkart.bean.Gym;
 import com.flipkart.utils.DbUtils;
 
 import java.sql.Connection;
@@ -10,16 +10,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GymDao{
+public class GymDao implements GymDaoInterface {
 
     public static DbUtils dbUtils = new DbUtils();
 
+    @Override
     public void addGym(Gym gym) {
-
         String sql = "INSERT INTO Gym (gymId, gymName, address, city, gymOwnerId, listed) VALUES (?, ?, ?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
-
             pstmt.setString(1, gym.getGymId());
             pstmt.setString(2, gym.getGymName());
             pstmt.setString(3, gym.getAddress());
@@ -30,17 +29,15 @@ public class GymDao{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
+    @Override
     public List<Gym> getGymCenters(String userId) {
         List<Gym> gymCenters = new ArrayList<>();
         String sql = "SELECT * FROM Gym WHERE gymOwnerID = ?";
 
         try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
-
-            statement.setString(1, userId); // Assuming user.getId() gives the gymOwnerID
-
+            statement.setString(1, userId);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -50,7 +47,7 @@ public class GymDao{
                 String city = resultSet.getString("city");
                 String gymOwnerID = resultSet.getString("gymOwnerID");
                 boolean listed = resultSet.getBoolean("listed");
-                Gym gym = new Gym(gymId, gymName, address, city, gymOwnerID,listed);
+                Gym gym = new Gym(gymId, gymName, address, city, gymOwnerID, listed);
                 gymCenters.add(gym);
             }
         } catch (SQLException e) {
@@ -60,12 +57,12 @@ public class GymDao{
         return gymCenters;
     }
 
+    @Override
     public List<Gym> getAllGymCenters() {
         List<Gym> gymCenters = new ArrayList<>();
         String sql = "SELECT * FROM Gym";
 
         try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
-
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -75,7 +72,7 @@ public class GymDao{
                 String city = resultSet.getString("city");
                 String gymOwnerID = resultSet.getString("gymOwnerID");
                 boolean listed = resultSet.getBoolean("listed");
-                Gym gym = new Gym(gymId, gymName, address, city, gymOwnerID,listed);
+                Gym gym = new Gym(gymId, gymName, address, city, gymOwnerID, listed);
                 gymCenters.add(gym);
             }
         } catch (SQLException e) {
@@ -85,44 +82,32 @@ public class GymDao{
         return gymCenters;
     }
 
-
+    @Override
     public void listGym(String gymId) {
-
-        String sql = "UPDATE Gym SET listed = 1 WHERE gymId = (?)";
+        String sql = "UPDATE Gym SET listed = 1 WHERE gymId = ?";
 
         try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
-
             pstmt.setString(1, gymId);
-
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-
         }
         System.out.println("Listed " + gymId);
-
-
-
     }
 
+    @Override
     public void unlistGym(String gymId) {
-
-        String sql = "UPDATE Gym SET listed = 0 WHERE gymId = (?)";
+        String sql = "UPDATE Gym SET listed = 0 WHERE gymId = ?";
 
         try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
-
             pstmt.setString(1, gymId);
-
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-
         }
-        System.out.println("UnListed " + gymId);
-
-
-
+        System.out.println("Unlisted " + gymId);
     }
+
 
 
 //    public User validateUser(String username, String password) {
