@@ -17,23 +17,27 @@ public class AdminFlipFitMenu {
         this.user = user;
     }
 
-    public void showMenu(Scanner scanner){
-
+    public void showMenu(Scanner scanner) {
         GymViewingService gymViewingService = new GymViewingService();
 
-        System.out.println("Welcome Admin " + user.getUsername());
-        System.out.println("1. Show All gyms");
-        System.out.println("2. List a gym");
-        System.out.println("3. Unlist a gym");
-        System.out.println("4. Exit");
-        System.out.print("Enter your choice: ");
-        int choice = scanner.nextInt();
+        int choice;
 
-        while(choice!=4)
-        {
+        do {
+            System.out.println("1. Show All gyms");
+            System.out.println("2. List a gym");
+            System.out.println("3. Unlist a gym");
+            System.out.println("4. Exit");
+            System.out.println();
+            System.out.print("Enter your choice: ");
+
+            choice = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline character
+
+            System.out.println();
             switch (choice) {
                 case 1:
                     gymViewingService.viewGymToAdmin();
+                    System.out.println();
                     break;
                 case 2:
                     listingGymMenu(scanner);
@@ -47,20 +51,26 @@ public class AdminFlipFitMenu {
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-            System.out.print("Enter your choice: ");
-            choice=scanner.nextInt();
-        }
-
+        } while (choice != 4);
     }
+
 
     private void listingGymMenu(Scanner scanner){
         GymViewingService gymViewingService = new GymViewingService();
         ListingAndUnlistingService listingAndUnlistingService = new ListingAndUnlistingService();
 
-        System.out.println("Select the id of the gym you want to list:");
+
         gymViewingService.viewUnlistedGym();
+
+        System.out.println();
+        System.out.print("Select the ID of the gym you want to list(-1 to exit): ");
         String selection;
         selection = scanner.next();
+
+        if(selection.equals("-1"))
+        {
+            return;
+        }
 
         listingAndUnlistingService.listThisGym(selection);
 
@@ -70,10 +80,18 @@ public class AdminFlipFitMenu {
         GymViewingService gymViewingService = new GymViewingService();
         ListingAndUnlistingService listingAndUnlistingService = new ListingAndUnlistingService();
 
-        System.out.println("Select the id of the gym you want to list:");
+
         gymViewingService.viewlistedGym();
+
+        System.out.println();
+        System.out.print("Select the ID of the gym you want to list(-1 to exit) :");
         String selection;
         selection = scanner.next();
+
+        if(selection.equals("-1"))
+        {
+            return;
+        }
 
         listingAndUnlistingService.unlistThisGym(selection);
 

@@ -99,8 +99,10 @@ public class GymDao{
             e.printStackTrace();
 
         }
-        System.out.println("Listed " + gymId);
 
+        System.out.println();
+        System.out.println("------Listed " + gymId + " on platform ------");
+        System.out.println();
 
 
     }
@@ -118,7 +120,9 @@ public class GymDao{
             e.printStackTrace();
 
         }
-        System.out.println("UnListed " + gymId);
+        System.out.println();
+        System.out.println("------Unlisted " + gymId + " on platform ------");
+        System.out.println();
 
 
 

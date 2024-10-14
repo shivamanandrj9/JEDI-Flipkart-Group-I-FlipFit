@@ -26,16 +26,19 @@ public class FlipFitApplication
 
         int choice=-1;
         while (choice != 4) {
-            System.out.println("-----------------------------------------------------------------------------------");
-            System.out.println("----------------------- Welcome to FlipFit: Your Fitness Partner --------------------");
-            System.out.println("-----------------------------------------------------------------------------------");
+            System.out.println("---------------------------------------------------------------");
+            System.out.println("----------------------- Welcome to FlipFit ---------------------");
+            System.out.println("----------------------------------------------------------------");
             displayCurrentDateTime(); // Display current date and time
             System.out.println("1. Login");
             System.out.println("2. Registration of the Gym Customer");
             System.out.println("3. Registration of the Gym Owner");
             System.out.println("4. Exit");
+            System.out.println();
             System.out.print("Enter your choice: ");
+
             choice = scanner.nextInt();
+            System.out.println();
             scanner.nextLine();
 
             switch (choice) {
@@ -76,30 +79,38 @@ public class FlipFitApplication
         User user = authenticationService.validateUser(username, password);
 
         if (user != null) {
+            System.out.println();
+            System.out.println("-----------------------");
             System.out.println("Logged in successfully.");
+
 
 
             LocalDateTime now = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             String formattedDateTime = now.format(formatter);
 
-            System.out.println("Username: " + user.getUsername());
             System.out.println("Current Date and Time: " + formattedDateTime);
 
             String roleId = user.getRoleId();
             switch (roleId) {
                 case "1":
-                    System.out.println("Welcome Customer !!!");
+                    System.out.println("Welcome Customer "+ user.getName()+ "!!!");
+                    System.out.println("-----------------------");
+                    System.out.println();
                     CustomerFlipFitMenu customerFlipFitMenu=new CustomerFlipFitMenu(user);
                     customerFlipFitMenu.showMenu(scanner);
                     break;
                 case "2":
-                    System.out.println("Welcome Admin !!!");
+                    System.out.println("Welcome Admin "+user.getName()+" !!!");
+                    System.out.println("-----------------------");
+                    System.out.println();
                     AdminFlipFitMenu adminFlipFitMenu = new AdminFlipFitMenu(user);
                     adminFlipFitMenu.showMenu(scanner);
                     break;
                 case "3":
-                    System.out.println("Welcome Gym Owner !!!");
+                    System.out.println("Welcome Gym Owner "+user.getName()+" !!!");
+                    System.out.println("-----------------------");
+                    System.out.println();
                     GymOwnerFlipFitMenu gymOwnerFlipFitMenu = new GymOwnerFlipFitMenu(scanner, user);
                     gymOwnerFlipFitMenu.showMenu();
                     break;
