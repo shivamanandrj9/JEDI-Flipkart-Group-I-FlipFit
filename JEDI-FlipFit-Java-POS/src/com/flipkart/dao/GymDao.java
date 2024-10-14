@@ -57,6 +57,31 @@ public class GymDao implements GymDaoInterface {
         return gymCenters;
     }
 
+    public Gym getGymFromGymId(String gymId) {
+
+        String sql = "SELECT * FROM Gym WHERE gymID = ?";
+
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
+            statement.setString(1, gymId);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                String gymID = resultSet.getString("gymId");
+                String gymName = resultSet.getString("gymName");
+                String address = resultSet.getString("address");
+                String city = resultSet.getString("city");
+                String gymOwnerID = resultSet.getString("gymOwnerID");
+                boolean listed = resultSet.getBoolean("listed");
+                Gym gym = new Gym(gymId, gymName, address, city, gymOwnerID, listed);
+                return gym;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     @Override
     public List<Gym> getAllGymCenters() {
         List<Gym> gymCenters = new ArrayList<>();

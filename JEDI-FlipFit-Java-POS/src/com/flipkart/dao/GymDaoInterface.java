@@ -14,4 +14,6 @@ public interface GymDaoInterface {
     void listGym(String gymId);
 
     void unlistGym(String gymId);
+
+    Gym getGymFromGymId(String gymId);
 }

@@ -24,6 +24,7 @@ public class CustomerFlipFitMenu {
             System.out.println("2. View Bookings");
             System.out.println("3. Cancel Booking");
             System.out.println("4. Logout");
+            System.out.println();
             System.out.print("Enter your choice: ");
             userChoice = scanner.nextInt();
             scanner.nextLine();

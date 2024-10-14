@@ -12,4 +12,6 @@ public interface SlotDaoInterface {
     List<Slot> getSlots(String gymId, String date);
 
     StringTriplet getSlotTiming(String slotId);
+
+    Slot getSlotFromSlotId(String slotId);
 }
