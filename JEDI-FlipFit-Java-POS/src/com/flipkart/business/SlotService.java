@@ -4,6 +4,7 @@ import com.flipkart.bean.Booking;
 import com.flipkart.bean.Slot;
 import com.flipkart.dao.BookingDao;
 import com.flipkart.dao.SlotDao;
+import com.flipkart.exception.UserNoBookingException;
 import com.flipkart.helper.Config;
 import com.flipkart.helper.StringTriplet;
 import com.flipkart.utils.DbUtils;
@@ -35,7 +36,13 @@ public class SlotService implements SlotServiceInterface {
         StringTriplet newdatetime=slotDao.getSlotTiming(slotId);
 
 
-        List<Booking> bookingsUser=bookingDao.getUserBookings(userId);
+        List<Booking> bookingsUser= null;
+        try {
+            bookingsUser = bookingDao.getUserBookings(userId);
+        } catch (UserNoBookingException e) {
+            System.err.println(e.toString());
+            return;
+        }
 
         for(Booking bookingUser:bookingsUser)
         {
