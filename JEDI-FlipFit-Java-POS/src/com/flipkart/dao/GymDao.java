@@ -2,8 +2,8 @@ package com.flipkart.dao;
 
 import com.flipkart.bean.Gym;
 import com.flipkart.utils.DbUtils;
-import com.flipkart.utils.SQLConstants;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,11 +16,9 @@ public class GymDao implements GymDaoInterface {
 
     @Override
     public void addGym(Gym gym) {
+        String sql = "INSERT INTO Gym (gymId, gymName, address, city, gymOwnerId, listed) VALUES (?, ?, ?, ?, ?, ?)";
 
-//        String sql = "INSERT INTO Gym (gymId, gymName, address, city, gymOwnerId, listed) VALUES (?, ?, ?, ?, ?, ?)";
-
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.INSERT_GYM)) {
-
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
             pstmt.setString(1, gym.getGymId());
             pstmt.setString(2, gym.getGymName());
             pstmt.setString(3, gym.getAddress());
@@ -36,13 +34,10 @@ public class GymDao implements GymDaoInterface {
     @Override
     public List<Gym> getGymCenters(String userId) {
         List<Gym> gymCenters = new ArrayList<>();
-//        String sql = "SELECT * FROM Gym WHERE gymOwnerID = ?";
+        String sql = "SELECT * FROM Gym WHERE gymOwnerID = ?";
 
-
-        try (PreparedStatement statement = dbUtils.connection.prepareStatement(SQLConstants.GET_OWNER_GYMS)) {
-
-            statement.setString(1, userId); // Assuming user.getId() gives the gymOwnerID
-
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
+            statement.setString(1, userId);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -65,11 +60,9 @@ public class GymDao implements GymDaoInterface {
     @Override
     public List<Gym> getAllGymCenters() {
         List<Gym> gymCenters = new ArrayList<>();
-//        String sql = "SELECT * FROM Gym";
+        String sql = "SELECT * FROM Gym";
 
-
-        try (PreparedStatement statement = dbUtils.connection.prepareStatement(SQLConstants.GET_ALL_GYMS)) {
-
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -91,11 +84,9 @@ public class GymDao implements GymDaoInterface {
 
     @Override
     public void listGym(String gymId) {
+        String sql = "UPDATE Gym SET listed = 1 WHERE gymId = ?";
 
-//        String sql = "UPDATE Gym SET listed = 1 WHERE gymId = (?)";
-
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.LIST_GYM)) {
-
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
             pstmt.setString(1, gymId);
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -113,12 +104,9 @@ public class GymDao implements GymDaoInterface {
 
     @Override
     public void unlistGym(String gymId) {
+        String sql = "UPDATE Gym SET listed = 0 WHERE gymId = ?";
 
-
-//        String sql = "UPDATE Gym SET listed = 0 WHERE gymId = (?)";
-
-        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.UNLIST_GYM)) {
-
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
             pstmt.setString(1, gymId);
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -133,4 +121,36 @@ public class GymDao implements GymDaoInterface {
 
 
     }
+
+
+
+//    public User validateUser(String username, String password) {
+//        String sql = "SELECT * FROM User WHERE username = ? AND password = ?";
+//        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
+//            statement.setString(1, username);
+//            statement.setString(2, password);
+//            ResultSet rs = statement.executeQuery();
+//            if (rs.next()) {
+//                return new User(rs.getString("userId"),rs.getString("username"), rs.getString("password"), rs.getString("name"), rs.getString("email"), rs.getString("phone"), rs.getInt("age"), rs.getString("roleId"));
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public boolean updateUser(User user) {
+//        String sql = "UPDATE user SET username = ?, password = ? WHERE userid = ?";
+//        try (Connection conn = dbutils.getConnection();
+//             PreparedStatement ps = conn.prepareStatement(sql)) {
+//            ps.setString(1, user.getUsername());
+//            ps.setString(2, user.getPassword());
+//            ps.setString(3, user.getUserid());
+//            return ps.executeUpdate() > 0;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return false;
+//    }
 }
