@@ -1,5 +1,6 @@
 package com.flipkart.dao;
 
+import com.flipkart.bean.Gym;
 import com.flipkart.bean.Slot;
 import com.flipkart.helper.StringTriplet;
 import com.flipkart.utils.DbUtils;
@@ -70,6 +71,31 @@ public class SlotDao implements SlotDaoInterface {
                 String date = resultSet.getString("date");
 
                 return new StringTriplet(date, starttime, endtime);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public Slot getSlotFromSlotId(String slotId)  {
+
+        String sql = "SELECT * FROM Slot WHERE slotID = ?";
+
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
+            statement.setString(1, slotId);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                String slotID = resultSet.getString("slotID");
+                String gymId = resultSet.getString("gymId");
+                String starttime = resultSet.getString("starttime");
+                String endtime = resultSet.getString("endtime");
+                int capacity = resultSet.getInt("capacity");
+                String date= resultSet.getString("date");
+                Slot slot = new Slot(gymId, slotId, date, starttime, endtime, capacity);
+                return slot;
             }
         } catch (SQLException e) {
             e.printStackTrace();

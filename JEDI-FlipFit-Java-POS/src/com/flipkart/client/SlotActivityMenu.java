@@ -22,15 +22,19 @@ public class SlotActivityMenu {
         List<Gym> gymList=gymDao.getGymCenters(gymOwnerId);
 
 
-
-        System.out.println("Select any Gym Id to add slots");
-        for(Gym gym:gymList){
-            if(gym.getIsListed())
-            {
-                System.out.print(gym.getGymId()+" ");
-                System.out.println(gym.getGymName()+" ");
+        System.out.println();
+        System.out.println("=== Approved Gym List ===");
+        System.out.printf("%-15s %-25s %-20s %-30s%n", "Gym ID", "Gym Name", "City", "Address");
+        System.out.println("--------------------------------------------------------------");
+        for (Gym gym : gymList) {
+            if (gym.getIsListed()) {
+                System.out.printf("%-15s %-25s %-20s %-30s%n", gym.getGymId(), gym.getGymName(), gym.getCity(), gym.getAddress());
             }
         }
+
+        System.out.println();
+        System.out.print("Select the Gym ID to add slots: ");
+
 
         boolean isValidSelection=false;
         String selectedId = "";
@@ -49,25 +53,32 @@ public class SlotActivityMenu {
 
         }
 
+        System.out.println();
+        System.out.println("Please enter the below details");
+        System.out.println();
 
         String id = Integer.toString(1+dbUtils.getTableCnt("Slot"));
-        System.out.println("Enter year(yyyy): ");
+        System.out.print("Enter year(yyyy): ");
         String year = scanner.nextLine();
-        System.out.println("Enter month(mm): ");
+        System.out.print("Enter month(mm): ");
         String month = scanner.nextLine();
-        System.out.println("Enter date(dd): ");
+        System.out.print("Enter date(dd): ");
         String date = scanner.nextLine();
 
-        System.out.println("Enter Start time according to 24hrs clock(0000-2359): ");
+        System.out.print("Enter Start time according to 24hrs clock(0000-2359): ");
         String startTime = scanner.nextLine();
-        System.out.println("Enter End time according to 24hrs clock(0000-2359): ");
+        System.out.print("Enter End time according to 24hrs clock(0000-2359): ");
         String endTime = scanner.nextLine();
-        System.out.println("Enter capacity of slot(Number of vacancies): ");
+        System.out.print("Enter capacity of slot(Number of vacancies): ");
 
         String st = date+"/"+month+"/"+year;
         int cp = scanner.nextInt();
         Slot slt = new Slot(selectedId,  id, st, startTime,endTime,cp);
         slotService.addSlot(slt);
+
+        System.out.println();
+        System.out.println("------ Slot added successfully ------");
+        System.out.println();
 
     }
 

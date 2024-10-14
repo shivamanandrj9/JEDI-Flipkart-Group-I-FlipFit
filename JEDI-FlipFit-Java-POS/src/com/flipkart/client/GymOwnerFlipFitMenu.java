@@ -30,6 +30,7 @@ public class GymOwnerFlipFitMenu {
             System.out.println("2. Add New Gym Center");
             System.out.println("3. Add Gym Slots");
             System.out.println("4. Logout");
+            System.out.println();
             System.out.print("Enter your choice: ");
             gymOwnerChoice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline
@@ -37,6 +38,7 @@ public class GymOwnerFlipFitMenu {
             switch (gymOwnerChoice) {
                 case 1:
                     gymViewingService.viewGymToOwner(user);
+                    System.out.println();
                     break;
                 case 2:
                     registrationMenu.registerGym(scanner,user.getUserId());
