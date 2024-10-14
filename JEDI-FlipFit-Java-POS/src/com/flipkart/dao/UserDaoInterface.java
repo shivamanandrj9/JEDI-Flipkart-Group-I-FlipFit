@@ -1,6 +1,7 @@
 package com.flipkart.dao;
 
 import com.flipkart.bean.User;
+import com.flipkart.exception.UserAlreadyExistsException;
 
 /**
  * Interface for managing user-related operations.
@@ -14,7 +15,7 @@ public interface UserDaoInterface {
      * @param user The {@link User} object containing user details such as ID, username, password,
      *             name, email, phone, age, and role ID.
      */
-    void addUser(User user);
+    void addUser(User user) throws UserAlreadyExistsException;
 
     /**
      * Validates a user's credentials (username and password) and retrieves the user details if valid.
