@@ -8,7 +8,7 @@ public class DbUtils {
 
     private static final String url = "jdbc:mysql://localhost:3306/FlipFitDB";
     private static final String user = "root";
-    private static final String password = "password";
+    private static final String password = "root_mysql";
 
     public static Connection connection;
 
