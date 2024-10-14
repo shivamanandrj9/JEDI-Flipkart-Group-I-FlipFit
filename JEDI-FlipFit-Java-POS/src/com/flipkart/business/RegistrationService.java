@@ -7,7 +7,7 @@ import com.flipkart.utils.DbUtils;
 
 import java.util.*;
 
-public class RegistrationService {
+public class RegistrationService implements RegistrationServiceInterface {
 
     public static DbUtils dbutils=new DbUtils();
 
