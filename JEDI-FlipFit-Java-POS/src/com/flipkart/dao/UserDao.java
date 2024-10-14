@@ -1,23 +1,21 @@
 package com.flipkart.dao;
 
-import com.flipkart.bean.*;
+import com.flipkart.bean.User;
 import com.flipkart.utils.DbUtils;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDao{
+public class UserDao implements UserDaoInterface {
 
     public static DbUtils dbUtils = new DbUtils();
 
+    @Override
     public void addUser(User user) {
-
         String sql = "INSERT INTO User (userId, username, password, name, email, phone, age, roleId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
-
             pstmt.setString(1, user.getUserId());
             pstmt.setString(2, user.getUsername());
             pstmt.setString(3, user.getPassword());
@@ -26,16 +24,13 @@ public class UserDao{
             pstmt.setString(6, user.getPhone());
             pstmt.setInt(7, user.getAge());
             pstmt.setString(8, user.getRoleId());
-            System.out.println(pstmt.toString());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
-
-
+    @Override
     public User validateUser(String username, String password) {
         String sql = "SELECT * FROM User WHERE username = ? AND password = ?";
         try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
@@ -43,13 +38,23 @@ public class UserDao{
             statement.setString(2, password);
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
-                return new User(rs.getString("userId"),rs.getString("username"), rs.getString("password"), rs.getString("name"), rs.getString("email"), rs.getString("phone"), rs.getInt("age"), rs.getString("roleId"));
+                return new User(
+                        rs.getString("userId"),
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("name"),
+                        rs.getString("email"),
+                        rs.getString("phone"),
+                        rs.getInt("age"),
+                        rs.getString("roleId")
+                );
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
+
 //
 //    @Override
 //    public boolean updateUser(User user) {

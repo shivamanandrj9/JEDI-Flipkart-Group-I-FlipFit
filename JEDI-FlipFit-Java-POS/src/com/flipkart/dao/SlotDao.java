@@ -1,8 +1,8 @@
 package com.flipkart.dao;
 
-import com.flipkart.bean.*;
-import com.flipkart.utils.DbUtils;
+import com.flipkart.bean.Slot;
 import com.flipkart.helper.StringTriplet;
+import com.flipkart.utils.DbUtils;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,17 +10,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class SlotDao{
+public class SlotDao implements SlotDaoInterface {
 
     public static DbUtils dbUtils = new DbUtils();
 
+    @Override
     public void addSlot(Slot slot) {
-
-        String sql = "INSERT INTO Slot (slotID, gymId,date, starttime, endtime, capacity) VALUES (?, ?,?, ?, ?, ?)";
+        String sql = "INSERT INTO Slot (slotID, gymId, date, starttime, endtime, capacity) VALUES (?, ?, ?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(sql)) {
-
             pstmt.setString(1, slot.getSlotID());
             pstmt.setString(2, slot.getGymId());
             pstmt.setString(3, slot.getDate());
@@ -31,18 +29,15 @@ public class SlotDao{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
-
-
-    public List<Slot> getSlots(String gymId,String date) {
+    @Override
+    public List<Slot> getSlots(String gymId, String date) {
         List<Slot> slots = new ArrayList<>();
-        String sql = "SELECT * FROM Slot WHERE gymId = ? AND date=?";
+        String sql = "SELECT * FROM Slot WHERE gymId = ? AND date = ?";
 
         try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
-
-            statement.setString(1, gymId); // Assuming user.getId() gives the gymOwnerID
+            statement.setString(1, gymId);
             statement.setString(2, date);
             ResultSet resultSet = statement.executeQuery();
 
@@ -61,24 +56,20 @@ public class SlotDao{
         return slots;
     }
 
-
-    public StringTriplet getSlotTiming(String slotId)
-    {
+    @Override
+    public StringTriplet getSlotTiming(String slotId) {
         String sql = "SELECT * FROM Slot WHERE slotID = ?";
 
         try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
-
-            statement.setString(1, slotId); // Assuming user.getId() gives the gymOwnerID
+            statement.setString(1, slotId);
             ResultSet resultSet = statement.executeQuery();
 
-            while (resultSet.next()) {
-
+            if (resultSet.next()) {
                 String starttime = resultSet.getString("starttime");
                 String endtime = resultSet.getString("endtime");
                 String date = resultSet.getString("date");
 
-                StringTriplet stringTriplet=new StringTriplet(date,starttime,endtime);
-                return stringTriplet;
+                return new StringTriplet(date, starttime, endtime);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -86,5 +77,4 @@ public class SlotDao{
 
         return null;
     }
-
 }
