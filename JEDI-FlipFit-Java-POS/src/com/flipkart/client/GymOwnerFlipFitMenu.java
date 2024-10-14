@@ -6,16 +6,30 @@ import com.flipkart.business.SlotService;
 
 import java.util.Scanner;
 
+/**
+ * Represents the gym owner menu in the FlipFit system.
+ * This class provides functionalities for gym owners to manage their gyms and slots.
+ */
 public class GymOwnerFlipFitMenu {
 
     private Scanner scanner; // Scanner instance for user input
     private User user;
 
+    /**
+     * Constructor to initialize the GymOwnerFlipFitMenu with user and scanner.
+     *
+     * @param scanner Scanner object for capturing user input
+     * @param user    The user (gym owner) accessing the menu
+     */
     public GymOwnerFlipFitMenu(Scanner scanner, User user) {
         this.scanner = scanner;
-        this.user=user;
+        this.user = user;
     }
 
+    /**
+     * Displays the menu options for the gym owner.
+     * This method provides options to view gyms, add a new gym, add gym slots, and logout.
+     */
     public void showMenu() {
         int gymOwnerChoice = -1;
 
@@ -25,6 +39,7 @@ public class GymOwnerFlipFitMenu {
         SlotActivityMenu slotAddingMenu = new SlotActivityMenu();
 
         while (gymOwnerChoice != 4) { // Updated to 4 for logout
+            // Display menu options
             System.out.println("Gym Owner Menu:");
             System.out.println("1. View all Gym Centers");
             System.out.println("2. Add New Gym Center");
@@ -41,10 +56,10 @@ public class GymOwnerFlipFitMenu {
                     System.out.println();
                     break;
                 case 2:
-                    registrationMenu.registerGym(scanner,user.getUserId());
+                    registrationMenu.registerGym(scanner, user.getUserId());
                     break;
                 case 3:
-                    slotAddingMenu.addSlot(scanner,user.getUserId());
+                    slotAddingMenu.addSlot(scanner, user.getUserId());
                     break;
                 case 4:
                     System.out.println("Logging out.");
