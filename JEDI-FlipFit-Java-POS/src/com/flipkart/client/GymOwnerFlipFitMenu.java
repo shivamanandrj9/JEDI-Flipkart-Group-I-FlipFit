@@ -39,7 +39,7 @@ public class GymOwnerFlipFitMenu {
                     gymViewingService.viewGymToOwner(user);
                     break;
                 case 2:
-                    registrationMenu.registerGym(scanner,user.getUserId());;
+                    registrationMenu.registerGym(scanner,user.getUserId());
                     break;
                 case 3:
                     slotAddingMenu.addSlot(scanner,user.getUserId());
