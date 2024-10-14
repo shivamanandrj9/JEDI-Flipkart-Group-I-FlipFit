@@ -1,6 +1,7 @@
 package com.flipkart.dao;
 
 import com.flipkart.bean.Booking;
+import com.flipkart.exception.UserNoBookingException;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public interface BookingDaoInterface {
      * @param userId The ID of the user whose bookings are to be fetched.
      * @return A list of {@link Booking} objects representing the bookings made by the user.
      */
-    public List<Booking> getUserBookings(String userId);
+    public List<Booking> getUserBookings(String userId) throws UserNoBookingException;
 
     /**
      * Deletes a specific booking from the database based on the booking ID.

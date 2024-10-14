@@ -3,6 +3,7 @@ package com.flipkart.business;
 import com.flipkart.bean.*;
 import com.flipkart.dao.GymDao;
 import com.flipkart.dao.UserDao;
+import com.flipkart.exception.UserAlreadyExistsException;
 import com.flipkart.utils.DbUtils;
 
 import java.util.*;
@@ -17,7 +18,11 @@ public class RegistrationService implements RegistrationServiceInterface {
         String id = "0" + Integer.toString(1+dbutils.getTableCnt("User"));
         User user = new User(id, username,  password, name,phone, email,  age, roleId);
         UserDao userDao = new UserDao();
-        userDao.addUser(user);
+        try {
+            userDao.addUser(user);
+        } catch (UserAlreadyExistsException e) {
+            System.err.println(e.toString());
+        }
 
 
     }

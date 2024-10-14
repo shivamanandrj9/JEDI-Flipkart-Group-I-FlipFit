@@ -1,6 +1,7 @@
 package com.flipkart.dao;
 
 import com.flipkart.bean.User;
+import com.flipkart.exception.UserAlreadyExistsException;
 import com.flipkart.utils.DbUtils;
 import com.flipkart.utils.SQLConstants;
 
@@ -13,10 +14,22 @@ public class UserDao implements UserDaoInterface {
     public static DbUtils dbUtils = new DbUtils();
 
     @Override
-    public void addUser(User user) {
+    public void addUser(User user) throws UserAlreadyExistsException {
 
 //        String sql = "INSERT INTO User (userId, username, password, name, email, phone, age, roleId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.GET_USER)){
+            pstmt.setString(1, user.getUsername());
+            pstmt.setString(2, user.getPassword());
+            ResultSet res = pstmt.executeQuery();
 
+            if(res.next()){
+                //user already exists
+                throw new UserAlreadyExistsException(user.getUsername());
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         try (PreparedStatement pstmt = dbUtils.connection.prepareStatement(SQLConstants.INSERT_USER)) {
             pstmt.setString(1, user.getUserId());
             pstmt.setString(2, user.getUsername());

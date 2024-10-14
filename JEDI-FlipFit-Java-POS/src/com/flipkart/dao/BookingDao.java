@@ -1,6 +1,7 @@
 package com.flipkart.dao;
 
 import com.flipkart.bean.Booking;
+import com.flipkart.exception.UserNoBookingException;
 import com.flipkart.utils.DbUtils;
 import com.flipkart.utils.SQLConstants;
 
@@ -48,7 +49,7 @@ public class BookingDao implements BookingDaoInterface {
     }
 
     @Override
-    public List<Booking> getUserBookings(String userId) {
+    public List<Booking> getUserBookings(String userId) throws UserNoBookingException {
         List<Booking> bookings = new ArrayList<>();
 //        String sql = "SELECT * FROM Booking WHERE userID=?";
 
@@ -69,6 +70,9 @@ public class BookingDao implements BookingDaoInterface {
             e.printStackTrace();
         }
 
+        if(bookings.size() == 0){
+            throw new UserNoBookingException(userId);
+        }
         return bookings;
     }
 
