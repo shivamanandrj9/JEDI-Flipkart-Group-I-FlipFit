@@ -7,23 +7,25 @@ import com.flipkart.helper.StringTriplet;
 
 import java.util.List;
 
-public class BookingService {
+public class BookingService implements BookingServiceInterface {
 
     private static BookingDao bookingDao = new BookingDao();
     private static SlotDao slotDao = new SlotDao();
 
-    public void viewAllBookings(String userId){
+    @Override
+    public void viewAllBookings(String userId) {
 
-        List<Booking> bookingsUser=bookingDao.getUserBookings(userId);
+        List<Booking> bookingsUser = bookingDao.getUserBookings(userId);
 
-        for(Booking booking:bookingsUser){
-            System.out.print(booking.getBookingID()+" ");
-            StringTriplet datetime= slotDao.getSlotTiming(booking.getSlotID());
-            System.out.println(datetime.getDate()+datetime.getStarttime()+datetime.getEndtime());
+        for (Booking booking : bookingsUser) {
+            System.out.print(booking.getBookingID() + " ");
+            StringTriplet datetime = slotDao.getSlotTiming(booking.getSlotID());
+            System.out.println(datetime.getDate() + datetime.getStarttime() + datetime.getEndtime());
         }
     }
 
-    public void cancelBooking(String bookingID){
+    @Override
+    public void cancelBooking(String bookingID) {
 
     }
 

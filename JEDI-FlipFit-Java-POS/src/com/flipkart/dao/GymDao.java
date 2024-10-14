@@ -92,7 +92,14 @@ public class GymDao implements GymDaoInterface {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("Listed " + gymId);
+
+
+        System.out.println();
+        System.out.println("------Listed " + gymId + " on platform ------");
+        System.out.println();
+
+
+
     }
 
     @Override
@@ -105,7 +112,14 @@ public class GymDao implements GymDaoInterface {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("Unlisted " + gymId);
+
+        System.out.println();
+        System.out.println("------Unlisted " + gymId + " on platform ------");
+        System.out.println();
+
+
+
+
     }
 
 
