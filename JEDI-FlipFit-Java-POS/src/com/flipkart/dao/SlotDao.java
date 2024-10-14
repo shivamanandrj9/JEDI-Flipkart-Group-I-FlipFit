@@ -109,4 +109,30 @@ public class SlotDao implements SlotDaoInterface {
 
         return null;
     }
+
+    public List<Slot> getAllSlotForGym(String gymId) {
+        List<Slot> slots = new ArrayList<>();
+
+        String sql = "SELECT * FROM Slot WHERE gymId = ?";
+
+        try (PreparedStatement statement = dbUtils.connection.prepareStatement(sql)) {
+
+            statement.setString(1, gymId); // Assuming user.getId() gives the gymOwnerID
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                String slotId = resultSet.getString("slotId");
+                String starttime = resultSet.getString("starttime");
+                String endtime = resultSet.getString("endtime");
+                int capacity = resultSet.getInt("capacity");
+                String date= resultSet.getString("date");
+                Slot slot = new Slot(gymId, slotId, date, starttime, endtime, capacity);
+                slots.add(slot);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return slots;
+    }
 }

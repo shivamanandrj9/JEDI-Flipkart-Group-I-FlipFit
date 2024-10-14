@@ -270,6 +270,33 @@ public class SlotActivityMenu {
         System.out.println();
     }
 
+    public void viewSlot(Scanner scanner, String userId) {
+        List<Gym> gymList=gymDao.getAllGymCenters();
+        List<Slot> slots=new ArrayList<Slot>();
+        System.out.println("Here are the slots for your gym:");
+        System.out.printf("%-15s %-10s %-15s %-15s %-10s %-10s%n", "Slot ID", "Gym ID", "Start Time", "End Time", "Capacity", "Date");
+        System.out.println("-----------------------------------------------------------");
+
+        for (Gym gym : gymList) {
+            if (gym.getGymOwnerID().equals(userId)) {
+                List<Slot> curr_slots = slotDao.getAllSlotForGym(gym.getGymId());
+                for (Slot thisSlot : curr_slots) {
+                    System.out.printf("%-15s %-10s %-15s %-15s %-10d %-10s%n",
+                            thisSlot.getSlotID(),
+                            thisSlot.getGymId(),
+                            thisSlot.getStarttime(),
+                            thisSlot.getEndtime(),
+                            thisSlot.getCapacity(),
+                            thisSlot.getDate());
+                }
+            }
+        }
+        System.out.println();
+
+
+
+    }
+
 
 }
 

@@ -36,15 +36,16 @@ public class GymOwnerFlipFitMenu {
         RegistrationMenu registrationMenu = new RegistrationMenu();
         GymViewingService gymViewingService = new GymViewingService();
         SlotService slotService = new SlotService();
-        SlotActivityMenu slotAddingMenu = new SlotActivityMenu();
+        SlotActivityMenu slotActivityMenu = new SlotActivityMenu();
 
-        while (gymOwnerChoice != 4) { // Updated to 4 for logout
+        while (gymOwnerChoice != 5) { // Updated to 4 for logout
             // Display menu options
             System.out.println("Gym Owner Menu:");
             System.out.println("1. View all Gym Centers");
             System.out.println("2. Add New Gym Center");
             System.out.println("3. Add Gym Slots");
-            System.out.println("4. Logout");
+            System.out.println("4. View added Slots");
+            System.out.println("5. Logout");
             System.out.println();
             System.out.print("Enter your choice: ");
             gymOwnerChoice = scanner.nextInt();
@@ -59,9 +60,12 @@ public class GymOwnerFlipFitMenu {
                     registrationMenu.registerGym(scanner, user.getUserId());
                     break;
                 case 3:
-                    slotAddingMenu.addSlot(scanner, user.getUserId());
+                    slotActivityMenu.addSlot(scanner, user.getUserId());
                     break;
                 case 4:
+                    slotActivityMenu.viewSlot(scanner, user.getUserId());
+                    break;
+                case 5:
                     System.out.println("Logging out.");
                     break;
                 default:
