@@ -2,6 +2,7 @@ package com.flipkart.dao;
 
 import com.flipkart.bean.User;
 import com.flipkart.exception.UserAlreadyExistsException;
+import com.flipkart.exception.UserNotFoundException;
 import com.flipkart.utils.DbUtils;
 import com.flipkart.utils.SQLConstants;
 
@@ -46,7 +47,7 @@ public class UserDao implements UserDaoInterface {
     }
 
     @Override
-    public User validateUser(String username, String password) {
+    public User validateUser(String username, String password) throws UserNotFoundException {
 //        String sql = "SELECT * FROM User WHERE username = ? AND password = ?";
         try (PreparedStatement statement = dbUtils.connection.prepareStatement(SQLConstants.GET_USER)) {
             statement.setString(1, username);
@@ -63,6 +64,8 @@ public class UserDao implements UserDaoInterface {
                         rs.getInt("age"),
                         rs.getString("roleId")
                 );
+            }else{
+                throw new UserNotFoundException();
             }
         } catch (SQLException e) {
             e.printStackTrace();

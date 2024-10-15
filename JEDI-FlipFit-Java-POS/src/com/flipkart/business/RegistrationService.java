@@ -21,7 +21,7 @@ public class RegistrationService implements RegistrationServiceInterface {
         try {
             userDao.addUser(user);
         } catch (UserAlreadyExistsException e) {
-            System.err.println(e.toString());
+            System.err.println(e.getMessage());
         }
 
 

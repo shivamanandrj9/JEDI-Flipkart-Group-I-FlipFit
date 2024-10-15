@@ -2,6 +2,7 @@ package com.flipkart.dao;
 
 import com.flipkart.bean.User;
 import com.flipkart.exception.UserAlreadyExistsException;
+import com.flipkart.exception.UserNotFoundException;
 
 /**
  * Interface for managing user-related operations.
@@ -25,5 +26,5 @@ public interface UserDaoInterface {
      * @return A {@link User} object containing the user's details if the credentials are valid,
      *         or {@code null} if the credentials are incorrect.
      */
-    User validateUser(String username, String password);
+    User validateUser(String username, String password) throws UserNotFoundException;
 }

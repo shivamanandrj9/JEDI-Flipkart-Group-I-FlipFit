@@ -3,6 +3,7 @@ import com.flipkart.bean.User;
 import com.flipkart.business.AuthenticationService;
 import com.flipkart.business.RegistrationService;
 import com.flipkart.client.*;
+import com.flipkart.exception.UserNotFoundException;
 
 import java.util.Scanner;
 
@@ -15,13 +16,7 @@ public class FlipFitApplication
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
-
-
-
         RegistrationMenu registrationMenu = new RegistrationMenu();
-
-        AuthenticationService authenticationService = new AuthenticationService();
 
 
         int choice=-1;
@@ -76,13 +71,13 @@ public class FlipFitApplication
         AuthenticationService authenticationService = new AuthenticationService();
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
-        User user = authenticationService.validateUser(username, password);
 
-        if (user != null) {
+        try {
+            User user = authenticationService.validateUser(username, password);
+
             System.out.println();
             System.out.println("-----------------------");
             System.out.println("Logged in successfully.");
-
 
 
             LocalDateTime now = LocalDateTime.now();
@@ -94,21 +89,21 @@ public class FlipFitApplication
             String roleId = user.getRoleId();
             switch (roleId) {
                 case "1":
-                    System.out.println("Welcome Customer "+ user.getName()+ "!!!");
+                    System.out.println("Welcome Customer " + user.getName() + "!!!");
                     System.out.println("-----------------------");
                     System.out.println();
-                    CustomerFlipFitMenu customerFlipFitMenu=new CustomerFlipFitMenu(user);
+                    CustomerFlipFitMenu customerFlipFitMenu = new CustomerFlipFitMenu(user);
                     customerFlipFitMenu.showMenu(scanner);
                     break;
                 case "2":
-                    System.out.println("Welcome Admin "+user.getName()+" !!!");
+                    System.out.println("Welcome Admin " + user.getName() + " !!!");
                     System.out.println("-----------------------");
                     System.out.println();
                     AdminFlipFitMenu adminFlipFitMenu = new AdminFlipFitMenu(user);
                     adminFlipFitMenu.showMenu(scanner);
                     break;
                 case "3":
-                    System.out.println("Welcome Gym Owner "+user.getName()+" !!!");
+                    System.out.println("Welcome Gym Owner " + user.getName() + " !!!");
                     System.out.println("-----------------------");
                     System.out.println();
                     GymOwnerFlipFitMenu gymOwnerFlipFitMenu = new GymOwnerFlipFitMenu(scanner, user);
@@ -116,8 +111,9 @@ public class FlipFitApplication
                     break;
 
             }
-        } else {
-            System.out.println("Invalid username or password.");
+        }
+        catch (UserNotFoundException e) {
+            System.err.println(e.getMessage());
         }
     }
 }
