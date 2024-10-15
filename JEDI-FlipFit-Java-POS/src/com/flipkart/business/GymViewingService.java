@@ -18,21 +18,23 @@ public class GymViewingService implements GymViewingServiceInterface {
         System.out.println("=== Listed Gym List ===");
         System.out.printf("%-15s %-25s%n", "Gym ID", "Gym Name");
         System.out.println("-----------------------------");
-        for (Gym gym : gymList) {
+        gymList.forEach(gym -> {
             if (gym.getIsListed()) {
                 System.out.printf("%-15s %-25s%n", gym.getGymId(), gym.getGymName());
             }
-        }
+        });
+
         System.out.println("-----------------------------");
 
         System.out.println("\n=== Unlisted Gym List ===");
         System.out.printf("%-15s %-25s%n", "Gym ID", "Gym Name");
         System.out.println("-----------------------------");
-        for (Gym gym : gymList) {
+        gymList.forEach(gym -> {
             if (!gym.getIsListed()) {
                 System.out.printf("%-15s %-25s%n", gym.getGymId(), gym.getGymName());
             }
-        }
+        });
+
         System.out.println("-----------------------------");
 
     }
@@ -44,21 +46,23 @@ public class GymViewingService implements GymViewingServiceInterface {
         System.out.println("=== Listed Gym List ===");
         System.out.printf("%-15s %-25s%n", "Gym ID", "Gym Name");
         System.out.println("-----------------------------");
-        for (Gym gym : gymList) {
+        gymList.forEach(gym -> {
             if (gym.getIsListed()) {
                 System.out.printf("%-15s %-25s%n", gym.getGymId(), gym.getGymName());
             }
-        }
+        });
+
         System.out.println("-----------------------------");
 
         System.out.println("\n=== Unlisted Gym List ===");
         System.out.printf("%-15s %-25s%n", "Gym ID", "Gym Name");
         System.out.println("-----------------------------");
-        for (Gym gym : gymList) {
+        gymList.forEach(gym -> {
             if (!gym.getIsListed()) {
                 System.out.printf("%-15s %-25s%n", gym.getGymId(), gym.getGymName());
             }
-        }
+        });
+
         System.out.println("-----------------------------");
 
     }
@@ -70,11 +74,12 @@ public class GymViewingService implements GymViewingServiceInterface {
         System.out.println("=== Unlisted Gym List ===");
         System.out.printf("%-15s %-25s%n", "Gym ID", "Gym Name");
         System.out.println("-----------------------------");
-        for (Gym gym : gymList) {
+        gymList.forEach(gym -> {
             if (!gym.getIsListed()) {
                 System.out.printf("%-15s %-25s%n", gym.getGymId(), gym.getGymName());
             }
-        }
+        });
+
 
     }
 
@@ -85,11 +90,12 @@ public class GymViewingService implements GymViewingServiceInterface {
         System.out.println("=== Listed Gym List ===");
         System.out.printf("%-15s %-25s%n", "Gym ID", "Gym Name");
         System.out.println("-----------------------------");
-        for (Gym gym : gymList) {
+        gymList.forEach(gym -> {
             if (gym.getIsListed()) {
                 System.out.printf("%-15s %-25s%n", gym.getGymId(), gym.getGymName());
             }
-        }
+        });
+
 
     }
 

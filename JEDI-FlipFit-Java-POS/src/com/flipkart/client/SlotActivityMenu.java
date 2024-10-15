@@ -106,7 +106,13 @@ public class SlotActivityMenu {
         List<Gym> gymList = gymDao.getAllGymCenters();
 
         System.out.println();
-        System.out.print("Enter city: ");
+        System.out.println("=== Select a city ===");
+        List<Gym> allGymList=gymDao.getAllGymCenters();
+
+        System.out.println();
+        allGymList.forEach(gym -> System.out.println("- "+gym.getCity()));
+        System.out.println();
+        System.out.print("Enter city name: ");
         String city = scanner.nextLine();
         System.out.println();
         System.out.println("-----Gyms that are available in " + city + "-----");
@@ -116,14 +122,15 @@ public class SlotActivityMenu {
         System.out.printf("%-15s %-25s %-30s%n", "Gym ID", "Gym Name", "Address");
         System.out.println("---------------------------------------------------------------");
 
-        for (Gym gym : gymList) {
+        gymList.forEach(gym -> {
             if (gym.getIsListed() && gym.getCity().equals(city)) {
                 System.out.printf("%-15s %-25s %-30s%n",
                         gym.getGymId(),
                         gym.getGymName(),
                         gym.getAddress());
             }
-        }
+        });
+
 
         System.out.println();
         System.out.print("Enter the selected gym's ID: ");
