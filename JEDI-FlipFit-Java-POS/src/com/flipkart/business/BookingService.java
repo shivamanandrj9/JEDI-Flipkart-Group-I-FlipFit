@@ -18,34 +18,42 @@ public class BookingService implements BookingServiceInterface {
     public void viewAllBookings(String userId) {
 
 
-        System.out.println();
-        System.out.println("=== User Bookings ===");
-        System.out.printf("%-15s %-25s %-20s %-30s %-10s %-10s %-10s%n",
-                "Booking ID", "Gym Name", "City", "Address", "Date", "Start Time", "End Time");
-        System.out.println("------------------------------------------------------------------------------------------------------------------------------");
 
         List<Booking> bookingsUser;
 
-
-             bookingsUser = bookingDao.getUserBookings(userId);
-
+        bookingsUser = bookingDao.getUserBookings(userId);
 
 
-        for (Booking booking : bookingsUser) {
-            Slot curr_slot = slotDao.getSlotFromSlotId(booking.getSlotID());
-            Gym curr_gym = gymDao.getGymFromGymId(curr_slot.getGymId());
-
-            StringTriplet datetime = slotDao.getSlotTiming(booking.getSlotID());
-
-            System.out.printf("%-15s %-25s %-20s %-30s %-10s %-10s %-10s%n",
-                    booking.getBookingID(),
-                    curr_gym.getGymName(),
-                    curr_gym.getCity(),
-                    curr_gym.getAddress(),
-                    datetime.getDate(),
-                    convertTo12HourFormat(datetime.getStarttime()),
-                    convertTo12HourFormat(datetime.getEndtime()));
+        System.out.println();
+        if(bookingsUser.size()==0)
+        {
+            System.out.println("=== No Booking Found ===");
         }
+        else
+        {
+            System.out.println("=== User Bookings ===");
+            System.out.printf("%-15s %-25s %-20s %-30s %-10s %-10s %-10s%n",
+                    "Booking ID", "Gym Name", "City", "Address", "Date", "Start Time", "End Time");
+            System.out.println("------------------------------------------------------------------------------------------------------------------------------");
+
+
+            for (Booking booking : bookingsUser) {
+                Slot curr_slot = slotDao.getSlotFromSlotId(booking.getSlotID());
+                Gym curr_gym = gymDao.getGymFromGymId(curr_slot.getGymId());
+
+                StringTriplet datetime = slotDao.getSlotTiming(booking.getSlotID());
+
+                System.out.printf("%-15s %-25s %-20s %-30s %-10s %-10s %-10s%n",
+                        booking.getBookingID(),
+                        curr_gym.getGymName(),
+                        curr_gym.getCity(),
+                        curr_gym.getAddress(),
+                        datetime.getDate(),
+                        convertTo12HourFormat(datetime.getStarttime()),
+                        convertTo12HourFormat(datetime.getEndtime()));
+            }
+        }
+
         System.out.println();
 
     }
