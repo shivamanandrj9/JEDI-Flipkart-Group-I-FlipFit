@@ -1,0 +1,13 @@
+2024.10.16 14:35:08 INFO  Started: Metals version 1.3.5 in folders '/Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-Flipkart-FlipFit-DropWizard' for client Neovim 0.11.0-dev+g64847fbdc.[0m
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@5de9326b]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@6048f267]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@5de9326b]
+2024.10.16 14:35:08 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.[0m
+2024.10.16 14:35:08 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-Flipkart-FlipFit-DropWizard/src/main/java/com/flipkart/business/SlotServiceInterface.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:10 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-Flipkart-FlipFit-DropWizard/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-10-225.md
+2024.10.16 14:35:12 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-Flipkart-FlipFit-DropWizard/src/main/java/com/flipkart/business/SlotServiceInterface.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:13 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-Flipkart-FlipFit-DropWizard/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-13-021.md

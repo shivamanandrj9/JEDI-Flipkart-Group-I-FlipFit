@@ -1,0 +1,245 @@
+2024.10.16 14:35:15 INFO  Started: Metals version 1.3.5 in folders '/Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit' for client Neovim 0.11.0-dev+g64847fbdc.[0m
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@76835627]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@31c24a92]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@76835627]
+2024.10.16 14:35:15 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.[0m
+2024.10.16 14:35:16 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:17 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-17-145.md
+2024.10.16 14:35:23 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:23 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:23 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-23-887.md
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:24 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-24-085.md
+2024.10.16 14:35:23 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:24 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-24-373.md
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-25-247.md
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-25-731.md
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-25-789.md
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-25-923.md
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-010.md
+2024.10.16 14:35:26 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-225.md
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-319.md
+2024.10.16 14:35:26 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-524.md
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-555.md
+2024.10.16 14:35:26 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-771.md
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-799.md
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-26-830.md
+2024.10.16 14:35:26 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-27-047.md
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-27-131.md
+2024.10.16 14:35:26 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-27-337.md
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-27-425.md
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-27-588.md
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-27-745.md
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-27-929.md
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-28-033.md
+2024.10.16 14:35:27 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-28-235.md
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-28-301.md
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-28-513.md
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-28-566.md
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-28-775.md
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-29-294.md
+2024.10.16 14:35:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-29-494.md
+Oct 16, 2024 2:35:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-29-547.md
+2024.10.16 14:35:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:35:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-29-594.md
+2024.10.16 14:35:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-29-798.md
+2024.10.16 14:35:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-29-936.md
+2024.10.16 14:35:30 WARN  no build target for: /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java[0m
+2024.10.16 14:35:30 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:35:30 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-35-30-717.md
+2024.10.16 14:36:23 WARN  no build target for: /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java[0m
+2024.10.16 14:36:23 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:23 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-23-933.md
+2024.10.16 14:36:24 WARN  no build target for: /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java[0m
+2024.10.16 14:36:24 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:24 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-24-539.md
+2024.10.16 14:36:25 WARN  no build target for: /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java[0m
+2024.10.16 14:36:25 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-25-817.md
+2024.10.16 14:36:28 WARN  no build target for: /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java[0m
+2024.10.16 14:36:28 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-28-248.md
+2024.10.16 14:36:29 WARN  no build target for: /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java[0m
+2024.10.16 14:36:29 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-29-855.md
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-45-847.md
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-45-900.md
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-46-009.md
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-46-164.md
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-46-236.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-46-439.md
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:45 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-46-561.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-46-772.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-46-850.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-47-044.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-47-143.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-47-340.md
+2024.10.16 14:36:47 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-47-541.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-47-693.md
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:46 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-47-840.md
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-48-044.md
+Oct 16, 2024 2:36:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-48-066.md
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-48-168.md
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-48-380.md
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-48-876.md
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-48-938.md
+2024.10.16 14:36:48 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-49-142.md
+2024.10.16 14:36:49 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-49-250.md
+2024.10.16 14:36:49 WARN  no build target for: /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java[0m
+2024.10.16 14:36:49 INFO  no build target found for /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/JEDI-FlipFit-Java-POS/src/com/flipkart/utils/DbUtils.java. Using presentation compiler with project's scala-library version: 3.3.3[0m
+Oct 16, 2024 2:36:50 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/damaragidda.b/work/JEDI-Flipkart-Group-I-FlipFit/.metals/.reports/metals-full/2024-10-16/r_compiler-error_14-36-50-025.md
