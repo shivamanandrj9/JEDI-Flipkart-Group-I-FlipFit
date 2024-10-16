@@ -27,10 +27,14 @@ public class SlotService implements SlotServiceInterface {
     {
 
         String id = "00";
+//        cfg.increment();
+
         StringTriplet newdatetime=slotDao.getSlotTiming(slotId);
 
         List<Booking> bookingsUser= null;
-        bookingsUser = bookingDao.getUserBookings(userId);
+
+            bookingsUser = bookingDao.getUserBookings(userId);
+
 
         for(Booking bookingUser:bookingsUser)
         {
