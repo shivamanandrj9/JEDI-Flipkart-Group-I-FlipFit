@@ -10,7 +10,6 @@ public class RegistrationDetail {
     private String phone;
     private String email;
     private int age;
-    private String roleId;
 
 
     public RegistrationDetail() {
@@ -24,7 +23,6 @@ public class RegistrationDetail {
         this.phone = phone;
         this.email = email;
         this.age = age;
-        this.roleId = roleId;
     }
 
     // Getters and Setters
@@ -76,11 +74,4 @@ public class RegistrationDetail {
         this.age = age;
     }
 
-    public String getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(String roleId) {
-        this.roleId = roleId;
-    }
 }

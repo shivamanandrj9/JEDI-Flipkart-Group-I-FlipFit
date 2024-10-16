@@ -26,14 +26,10 @@ public class SlotService implements SlotServiceInterface {
     public void bookSlot(String userId,String slotId)
     {
 
-        String id = Integer.toString(cfg.getCounter());
-        cfg.increment();
-
-
-
+        String id = "00";
+//        cfg.increment();
 
         StringTriplet newdatetime=slotDao.getSlotTiming(slotId);
-
 
         List<Booking> bookingsUser= null;
 
