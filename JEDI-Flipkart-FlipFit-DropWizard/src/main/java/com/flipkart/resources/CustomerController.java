@@ -7,6 +7,7 @@ import com.flipkart.dao.BookingDao;
 import com.flipkart.dao.PaymentDao;
 import com.flipkart.exception.UserNotFoundException;
 import com.flipkart.model.*;
+import com.flipkart.utils.Authentication;
 import com.flipkart.utils.DbUtils;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.*;
@@ -23,26 +24,9 @@ public class CustomerController {
     @Produces(MediaType.APPLICATION_JSON) // Producing JSON response
     public Response viewBooking(@HeaderParam(HttpHeaders.AUTHORIZATION) String authorization) {
 
-        if (authorization == null || !authorization.startsWith("Basic ")) {
-            return Response.status(Response.Status.UNAUTHORIZED)
-                    .entity("Authorization header is missing or invalid.")
-                    .build();
-        }
-
-        // Decode the Base64 encoded username:password
-        String base64Credentials = authorization.substring("Basic".length()).trim();
-        String credentials = new String(Base64.getDecoder().decode(base64Credentials), StandardCharsets.UTF_8);
-
-        // credentials = "username:password"
-        String[] values = credentials.split(":", 2);
-        String username = values[0];
-        String password = values[1];
-
-        AuthenticationService authenticationService = new AuthenticationService();
-
         try{
 
-            User user = authenticationService.validateUser(username, password);
+            User user = Authentication.authenticate(authorization);
 
             // Fetch bookings for the user
             BookingService bookingService = new BookingService();
@@ -73,27 +57,10 @@ public class CustomerController {
     @Consumes(MediaType.APPLICATION_JSON) // Consuming JSON request body
     public Response bookSlot(@HeaderParam(HttpHeaders.AUTHORIZATION) String authorization, BookingDetail bookingRequest) {
 
-        // Validate the Authorization header
-        if (authorization == null || !authorization.startsWith("Basic ")) {
-            return Response.status(Response.Status.UNAUTHORIZED)
-                    .entity("Authorization header is missing or invalid.")
-                    .build();
-        }
-
-        // Decode the Base64 encoded username:password
-        String base64Credentials = authorization.substring("Basic".length()).trim();
-        String credentials = new String(Base64.getDecoder().decode(base64Credentials), StandardCharsets.UTF_8);
-
-        // credentials = "username:password"
-        String[] values = credentials.split(":", 2);
-        String username = values[0];
-        String password = values[1];
-
-        AuthenticationService authenticationService = new AuthenticationService();
 
         try {
             // Validate user credentials
-            User user = authenticationService.validateUser(username, password);
+            User user = Authentication.authenticate(authorization);
             PaymentDao paymentDao = new PaymentDao();
             DbUtils dbUtils = new DbUtils();
             Payment payment=new Payment();
@@ -137,27 +104,9 @@ public class CustomerController {
     @Consumes(MediaType.APPLICATION_JSON) // Consuming JSON request body
     public Response cancelSlot(@HeaderParam(HttpHeaders.AUTHORIZATION) String authorization,@QueryParam("BookingId") String bookingId) {
 
-        // Validate the Authorization header
-        if (authorization == null || !authorization.startsWith("Basic ")) {
-            return Response.status(Response.Status.UNAUTHORIZED)
-                    .entity("Authorization header is missing or invalid.")
-                    .build();
-        }
-
-        // Decode the Base64 encoded username:password
-        String base64Credentials = authorization.substring("Basic".length()).trim();
-        String credentials = new String(Base64.getDecoder().decode(base64Credentials), StandardCharsets.UTF_8);
-
-        // credentials = "username:password"
-        String[] values = credentials.split(":", 2);
-        String username = values[0];
-        String password = values[1];
-
-        AuthenticationService authenticationService = new AuthenticationService();
-
         try {
             // Validate user credentials
-            User user = authenticationService.validateUser(username, password);
+            User user = Authentication.authenticate(authorization);
             BookingDao bookingDao = new BookingDao();
             bookingDao.deleteSlot(bookingId);
 
