@@ -1,5 +1,8 @@
 package com.flipkart.business;
 
+import java.util.List;
+
+import com.flipkart.bean.Gym;
 import com.flipkart.bean.User;
 
 /**
@@ -16,15 +19,15 @@ public interface GymViewingServiceInterface {
     /**
      * View all listed and unlisted gyms to Admin
      */
-    void viewGymToAdmin();
+    List<Gym> viewGymToAdmin();
 
     /**
      * View all unlisted gyms
      */
-    void viewUnlistedGym();
+    List<Gym> viewUnlistedGym();
 
     /**
      * view all listed gyms on Flipfit App
      */
-    void viewlistedGym();
+    List<Gym> viewlistedGym();
 }

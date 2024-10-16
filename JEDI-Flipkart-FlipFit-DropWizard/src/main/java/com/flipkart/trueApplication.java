@@ -1,6 +1,8 @@
 package com.flipkart;
 
 import ch.qos.logback.core.net.SocketConnector;
+
+import com.flipkart.resources.AdminController;
 import com.flipkart.resources.CustomerController;
 import com.flipkart.resources.RegistrationController;
 import io.dropwizard.core.Application;
@@ -28,6 +30,7 @@ public class trueApplication extends Application<trueConfiguration> {
                     final Environment environment) {
         environment.jersey().register(new RegistrationController());
         environment.jersey().register(new CustomerController());
+        environment.jersey().register(new AdminController());
     }
 
 }
