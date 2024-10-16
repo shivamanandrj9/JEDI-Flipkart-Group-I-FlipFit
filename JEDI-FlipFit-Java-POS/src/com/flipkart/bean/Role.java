@@ -1,8 +1,10 @@
 package com.flipkart.bean;
 
 /**
+ *
  * class representing roles in the FlipFit system.
  * Roles include ADMIN, GYM_OWNER, and CUSTOMER.
+ * @author shubham dash
  */
 public class Role {
     private String roleId;

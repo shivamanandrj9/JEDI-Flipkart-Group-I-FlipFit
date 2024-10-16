@@ -5,7 +5,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
+ *
  * Represents a Slot for a gym with details like start time, end time, date, and capacity.
+ * @author akhminder
  */
 public class Slot {
 

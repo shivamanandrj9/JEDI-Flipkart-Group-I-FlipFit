@@ -5,8 +5,10 @@ import com.flipkart.exception.UserAlreadyExistsException;
 import com.flipkart.exception.UserNotFoundException;
 
 /**
+ *
  * Interface for managing user-related operations.
  * Defines methods for adding new users and validating user credentials.
+ * @author sudhir
  */
 public interface UserDaoInterface {
 

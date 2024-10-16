@@ -6,8 +6,10 @@ import com.flipkart.business.BookingService;
 import java.util.Scanner;
 
 /**
+ *
  * Represents the customer menu in the FlipFit system.
  * This class provides functionalities for customers to book, view, and cancel bookings.
+ * @author sudhir
  */
 public class CustomerFlipFitMenu {
 

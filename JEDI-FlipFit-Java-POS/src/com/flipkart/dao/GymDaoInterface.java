@@ -4,8 +4,10 @@ import com.flipkart.bean.Gym;
 import java.util.List;
 
 /**
+ *
  * Interface for managing gym-related operations.
  * Defines methods for adding, retrieving, listing, and unlisting gyms.
+ * @author arpit
  */
 public interface GymDaoInterface {
 

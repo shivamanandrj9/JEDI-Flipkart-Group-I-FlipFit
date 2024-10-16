@@ -9,8 +9,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ *
  * Represents the admin menu in the FlipFit system.
  * This class provides functionalities for admin to view and manage gyms.
+ * @author akminder
  */
 public class AdminFlipFitMenu {
 

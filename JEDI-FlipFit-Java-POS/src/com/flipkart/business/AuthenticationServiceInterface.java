@@ -4,7 +4,9 @@ import com.flipkart.bean.User;
 import com.flipkart.exception.UserNotFoundException;
 
 /**
+ *
  * Provides authentication service to all flipfit users
+ * @author akminder
  */
 public interface AuthenticationServiceInterface {
 

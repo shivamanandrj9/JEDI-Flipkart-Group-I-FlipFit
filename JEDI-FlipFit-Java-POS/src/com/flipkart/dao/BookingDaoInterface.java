@@ -5,9 +5,11 @@ import com.flipkart.bean.Booking;
 import java.util.List;
 
 /**
+ *
  * Interface for booking-related data operations.
  * Defines the methods required for booking management, such as creating bookings,
  * counting slot bookings, retrieving user bookings, and deleting bookings.
+ * @author bharadwaj
  */
 public interface BookingDaoInterface {
 

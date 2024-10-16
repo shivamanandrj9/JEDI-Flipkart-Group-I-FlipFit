@@ -2,6 +2,7 @@ package com.flipkart.bean;
 /**
  * Represents a booking in the FlipFit system.
  * A booking links a user to a specific schedule.
+ * * @author arpit shrivastava
  */
 public class Booking {
 

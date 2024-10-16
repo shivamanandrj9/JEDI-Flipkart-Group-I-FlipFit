@@ -6,8 +6,10 @@ import com.flipkart.helper.StringTriplet;
 import java.util.List;
 
 /**
+ *
  * Interface for managing slot-related operations.
  * Defines methods to add, retrieve, and fetch slot information based on various criteria.
+ * @author shivam
  */
 public interface SlotDaoInterface {
 

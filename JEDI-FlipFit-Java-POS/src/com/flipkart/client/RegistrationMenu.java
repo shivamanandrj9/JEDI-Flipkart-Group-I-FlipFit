@@ -5,8 +5,10 @@ import com.flipkart.business.RegistrationService;
 import java.util.Scanner;
 
 /**
+ *
  * Represents the registration menu in the FlipFit system.
  * This class provides functionalities for registering customers, gym owners, and gyms.
+ * @author shubham
  */
 public class RegistrationMenu {
 

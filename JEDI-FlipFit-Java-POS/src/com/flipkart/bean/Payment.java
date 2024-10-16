@@ -1,8 +1,10 @@
 package com.flipkart.bean;
 
 /**
+ *
  * Represents a payment in the FlipFit system.
  * Each payment is associated with a card and contains details such as payments ID and card details.
+ * @author shubham dash
  */
 public class Payment {
     private int paymentsId;

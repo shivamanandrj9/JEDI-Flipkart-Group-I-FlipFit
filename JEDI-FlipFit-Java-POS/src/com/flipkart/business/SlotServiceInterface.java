@@ -3,8 +3,10 @@ package com.flipkart.business;
 import com.flipkart.bean.Slot;
 
 /**
+ *
  * Facilitate gym owner to add a slot to a gym
  * Facilitate Customer to book a slot
+ * @author bharadwaj
  */
 public interface SlotServiceInterface {
 

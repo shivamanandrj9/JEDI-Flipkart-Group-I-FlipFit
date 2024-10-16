@@ -3,7 +3,9 @@ package com.flipkart.business;
 import com.flipkart.bean.User;
 
 /**
+ *
  * View listed and Unlisted gym list to Admin and Gym owner
+ * @author shivam anand
  */
 public interface GymViewingServiceInterface {
 

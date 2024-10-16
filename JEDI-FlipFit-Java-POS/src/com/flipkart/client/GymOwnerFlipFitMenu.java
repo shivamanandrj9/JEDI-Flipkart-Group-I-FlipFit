@@ -7,8 +7,10 @@ import com.flipkart.business.SlotService;
 import java.util.Scanner;
 
 /**
+ *
  * Represents the gym owner menu in the FlipFit system.
  * This class provides functionalities for gym owners to manage their gyms and slots.
+ * @author bhardwaj
  */
 public class GymOwnerFlipFitMenu {
 

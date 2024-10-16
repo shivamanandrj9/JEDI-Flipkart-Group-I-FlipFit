@@ -1,7 +1,9 @@
 package com.flipkart.bean;
 
 /**
+ *
  * Represents a User with personal details and credentials.
+ * @author bharadwaj
  */
 public class User {
     private String userId;

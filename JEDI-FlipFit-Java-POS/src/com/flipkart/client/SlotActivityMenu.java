@@ -9,9 +9,11 @@ import com.flipkart.utils.DbUtils;
 import java.util.*;
 
 /**
+ *
  * Represents the slot activity menu in the FlipFit system.
  * This class provides functionalities for managing gym slots,
  * including adding, booking, and canceling slots.
+ * @author shivam
  */
 public class SlotActivityMenu {
 

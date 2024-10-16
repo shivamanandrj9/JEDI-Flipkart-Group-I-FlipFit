@@ -2,6 +2,7 @@ package com.flipkart.bean;
 
 /**
  * Represents a gym center in the FlipFit system.
+ * @author shivam anand
  */
 public class Gym {
 
@@ -29,11 +30,11 @@ public class Gym {
         this.gymOwnerID = gymOwnerID;
         this.isListed = isListed;
     }
+/**
+ * Retrieves the ID of the gym center.
+ * @return ID of the gym center
+ */
 
-    /**
-     * Retrieves the ID of the gym center.
-     * @return ID of the gym center
-     */
     public String getGymId() {
         return gymId;
     }
